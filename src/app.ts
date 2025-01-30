@@ -41,7 +41,14 @@ class Prodotto implements IProdotto {
     this.stato = stato;
   }
 
-  assegnaCliente(cliente: ICliente): void {}
+  assegnaCliente(cliente: ICliente): void {
+    if (this.stato === "Disponibile") {
+      console.log(
+        `Il cliente ${cliente.nome} ${cliente.cognome} ha ordinato il prodotto ${this.tipo} ${this.colore} con id ${this.ID}, pagerà con il metodo di pagamento ${cliente.metodoDiPagamento}`
+      );
+      this.stato = "Ordinato";
+    }
+  }
 }
 
 class Cliente implements ICliente {
@@ -61,7 +68,17 @@ class Cliente implements ICliente {
     this.email = email;
     this.metodoDiPagamento = metodoDiPagamento;
   }
-  ordinaProdotto(prodotto: IProdotto): void {}
+  ordinaProdotto(prodotto: IProdotto): void {
+    if (prodotto.stato === "Disponibile") {
+      console.log(
+        `Il prodotto ${prodotto.tipo} ${prodotto.colore} è stato ordinato!`
+      );
+    } else {
+      console.log(
+        `Il prodotto ${prodotto.tipo} ${prodotto.colore} non puo essere ordinato perché esaurito :(`
+      );
+    }
+  }
 }
 
 class ProcessoProduzione implements IProcessoProduzione {
@@ -79,10 +96,15 @@ class ProcessoProduzione implements IProcessoProduzione {
     this.prodottiInProduzione = prodottiInProduzione;
   }
 
-  aggiungiProdotto(prodotto: IProdotto): void {}
+  aggiungiProdotto(prodotto: IProdotto): void {
+    this.prodottiInProduzione.push(prodotto);
+    console.log(
+      `Il prodotto ${prodotto.tipo} ${prodotto.colore} con id ${prodotto.ID} e stato aggiunto al processo di produzione "${this.nome}"`
+    );
+  }
 }
 
-let snorkelingSmeraldoShorts = new Prodotto(
+let snorkelingSmeraldoShorts: Prodotto = new Prodotto(
   "Costume Snorkeling Pantaloncino",
   "S001",
   "L",
@@ -90,7 +112,7 @@ let snorkelingSmeraldoShorts = new Prodotto(
   "Disponibile"
 );
 
-let surfingOltreoceanoShorts = new Prodotto(
+let surfingOltreoceanoShorts: Prodotto = new Prodotto(
   "Costume Surfing Pantaloncino",
   "O002",
   "M",
@@ -98,7 +120,7 @@ let surfingOltreoceanoShorts = new Prodotto(
   "Disponibile"
 );
 
-let snorkelingTurcheseBikini = new Prodotto(
+let snorkelingTurcheseBikini: Prodotto = new Prodotto(
   "Costume Snorkeling Bikini",
   "T003",
   "S",
@@ -106,7 +128,7 @@ let snorkelingTurcheseBikini = new Prodotto(
   "Disponibile"
 );
 
-let surfingCoralloOnePiece = new Prodotto(
+let surfingCoralloOnePiece: Prodotto = new Prodotto(
   "Costume Surfing Intero",
   "C004",
   "XS",
@@ -114,7 +136,7 @@ let surfingCoralloOnePiece = new Prodotto(
   "Disponibile"
 );
 
-let pareoSmeraldo = new Prodotto(
+let pareoSmeraldo: Prodotto = new Prodotto(
   "Pareo",
   "P005",
   "L",
@@ -122,7 +144,7 @@ let pareoSmeraldo = new Prodotto(
   "Disponibile"
 );
 
-let cappelloTurchese = new Prodotto(
+let cappelloTurchese: Prodotto = new Prodotto(
   "Cappello con Visiera",
   "C006",
   "TU",
@@ -130,43 +152,43 @@ let cappelloTurchese = new Prodotto(
   "Disponibile"
 );
 
-let cappelloCorallo = new Prodotto(
+let cappelloCorallo: Prodotto = new Prodotto(
   "Cappello con Visiera",
   "C007",
   "TU",
   "Corallo",
-  "Esaurito"
+  "Disponibile"
 );
 
-let cliente001 = new Cliente(
+let cliente001: Cliente = new Cliente(
   "Luca",
   "Bianchi",
   "lucabianchi@email.com",
   "PayPal"
 );
 
-let cliente002 = new Cliente(
+let cliente002: Cliente = new Cliente(
   "Francesca",
   "Schianchi",
   "francescaschianchi@email.com",
   "Bonifico"
 );
 
-let cliente003 = new Cliente(
+let cliente003: Cliente = new Cliente(
   "Alessandro",
   "Vitale",
   "alessandrovitale@email.com",
   "Carta di Credito"
 );
 
-let cliente004 = new Cliente(
+let cliente004: Cliente = new Cliente(
   "Elisa",
   "Tosse",
   "tosseelisa@email.com",
   "PayPal"
 );
 
-let snorkelingPP = new ProcessoProduzione(
+let inUnMareDiPlastica: ProcessoProduzione = new ProcessoProduzione(
   "In un mare di plastica",
   "Produzione su commessa e filiera eco-sostenibile sono gli aspetti che caratterizzano il processo produttivo dei costumi Sunnee. Costumi realizzati con poliestere riciclato procurato della plastica trovata sulle nostre spiagge e nei nostri mari. Solo i costumi richiesti dai clienti vengono realizzati, senza eccedenze di magazzino che creano altro inquinamento.",
   [
@@ -177,8 +199,33 @@ let snorkelingPP = new ProcessoProduzione(
   ]
 );
 
-let cappelloPP = new ProcessoProduzione(
-  "Vecchio è meglio",
+let meglioVintageCheMai: ProcessoProduzione = new ProcessoProduzione(
+  "Meglio Vintage che mai",
   "Recuperiamo capi d'abbigliamnento buttati via e lavoriamo i loro tessuti per dargli nuovi aspetti. Non aggiungiamo nessun materiale nuovo ma ricicliamo quello che a qualcuno non serviva più per darlo a chi ne avrà bisogno.",
-  [pareoSmeraldo, cappelloCorallo, cappelloTurchese]
+  [pareoSmeraldo, cappelloTurchese]
 );
+
+cliente003.ordinaProdotto(snorkelingSmeraldoShorts);
+snorkelingSmeraldoShorts.assegnaCliente(cliente003);
+
+cliente001.ordinaProdotto(snorkelingTurcheseBikini);
+snorkelingTurcheseBikini.assegnaCliente(cliente001);
+
+cliente002.ordinaProdotto(cappelloCorallo);
+cappelloCorallo.assegnaCliente(cliente002);
+
+cliente004.ordinaProdotto(cappelloTurchese);
+cappelloTurchese.assegnaCliente(cliente004);
+
+cliente002.ordinaProdotto(cappelloTurchese);
+cappelloTurchese.assegnaCliente(cliente002);
+
+let playKidsUnisex: Prodotto = new Prodotto(
+  "Costume da bambino unisex",
+  "K001",
+  "XS",
+  "Nemo",
+  "Disponibile"
+);
+
+inUnMareDiPlastica.aggiungiProdotto(playKidsUnisex);
