@@ -1,3 +1,4 @@
+//main.js
 import { Prodotto } from "./class.js";
 import { snorkelingSmeraldoShorts, snorkelingTurcheseBikini, cappelloTurchese, cappelloCorallo, } from "./prodotti.js";
 import { cliente003, cliente001, cliente002, cliente004 } from "./clienti.js";

@@ -1,3 +1,5 @@
+//main.js
+
 import { Prodotto, ProcessoProduzione, Cliente } from "./class.js";
 import {
   snorkelingSmeraldoShorts,

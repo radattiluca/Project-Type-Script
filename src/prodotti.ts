@@ -1,3 +1,5 @@
+//prdotti.js
+
 import { Prodotto } from "./class.js";
 export {
   snorkelingSmeraldoShorts,

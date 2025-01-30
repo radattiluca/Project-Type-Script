@@ -1,3 +1,5 @@
+//interface.js
+
 export { ICliente, IProdotto, IProcessoProduzione };
 
 interface IProdotto {

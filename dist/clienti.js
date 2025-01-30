@@ -1,3 +1,4 @@
+//clienti.js
 import { Cliente } from "./class.js";
 export { cliente001, cliente002, cliente003, cliente004 };
 let cliente001 = new Cliente("Luca", "Bianchi", "lucabianchi@email.com", "PayPal");

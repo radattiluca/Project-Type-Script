@@ -1,3 +1,5 @@
+//clienti.js
+
 import { Cliente } from "./class.js";
 export { cliente001, cliente002, cliente003, cliente004 };
 

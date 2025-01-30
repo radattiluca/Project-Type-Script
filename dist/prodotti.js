@@ -1,3 +1,4 @@
+//prdotti.js
 import { Prodotto } from "./class.js";
 export { snorkelingSmeraldoShorts, surfingOltreoceanoShorts, snorkelingTurcheseBikini, surfingCoralloOnePiece, pareoSmeraldo, cappelloTurchese, cappelloCorallo, };
 let snorkelingSmeraldoShorts = new Prodotto("Costume Snorkeling Pantaloncino", "S001", "L", "Smeraldo", "Disponibile");

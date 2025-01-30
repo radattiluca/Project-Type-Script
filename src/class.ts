@@ -1,3 +1,5 @@
+//class.js
+
 import { IProdotto, ICliente, IProcessoProduzione } from "./interface.js";
 export { Prodotto, Cliente, ProcessoProduzione };
 class Prodotto implements IProdotto {

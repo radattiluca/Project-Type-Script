@@ -1,3 +1,4 @@
+//class.js
 export { Prodotto, Cliente, ProcessoProduzione };
 class Prodotto {
     constructor(tipo, ID, tg, colore, stato) {

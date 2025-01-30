@@ -1,3 +1,4 @@
+//processoProduzione.js
 import { ProcessoProduzione } from "./class.js";
 import { snorkelingSmeraldoShorts, snorkelingTurcheseBikini, surfingCoralloOnePiece, surfingOltreoceanoShorts, } from "./prodotti.js";
 import { pareoSmeraldo, cappelloTurchese } from "./prodotti.js";
