@@ -13,9 +13,13 @@
 
 1. **Clona il repository tramite Visual Studio Code**
 
-https://github.com/radattiluca/Project-Type-Script.git
+- https://github.com/radattiluca/Project-Type-Script.git
 
 2. **Apri il progetto in Visual Studio Code**
+
+- Installa node
+- Installa npm
+- Installa typescript
 
 3. **Avvia il server con Go Live** (dall'estensione **Live Server**) per eseguire il file TypeScript compilato nel browser.
 
@@ -35,7 +39,7 @@ Output:
 - Il prodotto "nomeProdotto" è stato ordinato!
 - l cliente "nomeCliente" ha ordinato il prodotto "nomeProdotto" con id "IDProdotto", pagerà con il metodo di pagamento "metodoDiPagamento".
 
-**Aggiunta nuovo prodotto ad uno dei processi di produzione:**
+**Aggiunta nuovo prodotto ad uno dei processi di produzione**
 
 Input:
 
@@ -44,5 +48,7 @@ Input:
 Output:
 
 - l prodotto "nomeProdotto" con id "idProdotto" è stato aggiunto al processo di produzione "nomeProcessoProduzione".
+
+---
 
 ✉️ **Contatti**: Se hai domande, apri un'**issue** su GitHub!
