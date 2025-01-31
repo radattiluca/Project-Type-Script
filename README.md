@@ -9,21 +9,25 @@
 - Associazione dell'ordine ad un determinato cliente
 - Aggiunta di nuovi prodotti ad uno dei processi di produzione
 
-## Installazione & Esecuzione
+## Esecuzione
 
-1. **Clona il repository tramite Visual Studio Code**
+**Inserisci il link nel browser che preferisci per aprirlo in codepen**
+
+- https://codepen.io/Luca-Radatti/pen/vEBPmgM
+
+**Cppure clona il repository tramite Visual Studio Code**
 
 - https://github.com/radattiluca/Project-Type-Script.git
 
-2. **Apri il progetto in Visual Studio Code**
+1. **Apri il progetto in Visual Studio Code ed installa**
 
 - Installa node
 - Installa npm
 - Installa typescript
 
-3. **Avvia il server con Go Live** (dall'estensione **Live Server**) per eseguire il file TypeScript compilato nel browser.
+2. **Avvia il server con Go Live** (dall'estensione **Live Server**) per eseguire il file TypeScript compilato nel browser.
 
-4. **Apri la console del browser** (`F12` o `Ctrl+Shift+I` su Chrome), (`Command+Option+I` su Mac) per visualizzare i messaggi dell'applicazione.
+3. **Apri la console del browser** (`F12` o `Ctrl+Shift+I` su Chrome), (`Command+Option+I` su Mac) per visualizzare i messaggi dell'applicazione.
 
 ## Esempio di Utilizzo
 
