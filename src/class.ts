@@ -81,7 +81,7 @@ class ProcessoProduzione implements IProcessoProduzione {
   aggiungiProdotto(prodotto: IProdotto): void {
     this.prodottiInProduzione.push(prodotto);
     console.log(
-      `Il prodotto ${prodotto.tipo} ${prodotto.colore} con id ${prodotto.ID} e stato aggiunto al processo di produzione "${this.nome}"`
+      `Il prodotto ${prodotto.tipo} ${prodotto.colore} con id ${prodotto.ID} è stato aggiunto al processo di produzione "${this.nome}"`
     );
   }
 }

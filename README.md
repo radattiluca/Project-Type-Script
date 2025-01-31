@@ -2,60 +2,47 @@
 
 > Un semplice progetto di gestione ordini scritto in **TypeScript**. Stampa messaggi di conferma e stato degli ordini direttamente nella **console del browser**.
 
-## 🚀 Funzionalità
+## Funzionalità
 
-- 📦 Creazione di nuovi ordini
-- 🔄 Aggiornamento dello stato di un ordine
-- 📜 Visualizzazione degli ordini in console
-- 🎭 Simulazione del processo di gestione degli ordini
+- Ordina prodotto se disponibile
+- Aggiornamento dello stato dell'ordine
+- Associazione dell'ordine ad un determinato cliente
+- Aggiunta di nuovi prodotti ad uno dei processi di produzione
 
-## 🛠 Installazione & Esecuzione
+## Installazione & Esecuzione
 
-1. **Clona il repository**
+1. **Clona il repository tramite Visual Studio Code**
 
-   ```sh
-   git clone https://github.com/tuo-username/nome-repo.git
-   cd nome-repo
-   ```
+https://github.com/radattiluca/Project-Type-Script.git
 
 2. **Apri il progetto in Visual Studio Code**
 
 3. **Avvia il server con Go Live** (dall'estensione **Live Server**) per eseguire il file TypeScript compilato nel browser.
 
-4. **Apri la console del browser** (`F12` o `Ctrl+Shift+I` su Chrome) per visualizzare i messaggi dell'applicazione.
+4. **Apri la console del browser** (`F12` o `Ctrl+Shift+I` su Chrome), (`Command+Option+I` su Mac) per visualizzare i messaggi dell'applicazione.
 
-## 📂 Struttura del Progetto
+## Esempio di Utilizzo
 
-```
-./
-├── src/
-│   ├── index.ts        # Punto di ingresso dell'applicazione
-│   ├── ordine.ts       # Definizione della classe Ordine
-│   ├── gestoreOrdini.ts # Logica di gestione ordini
-├── dist/               # Codice compilato in JavaScript
-├── tsconfig.json       # Configurazione TypeScript
-├── package.json        # Dipendenze e script (se applicabile)
-└── README.md           # Documentazione
-```
+**Ordine Prodotti**
 
-## ▶️ Esempio di Utilizzo
+Input:
 
-```sh
-Creazione di un nuovo ordine...
-Ordine #1 aggiunto con successo!
-Aggiornamento stato: Ordine #1 -> "In elaborazione"
-Stato attuale degli ordini:
-- Ordine #1: "In elaborazione"
-```
+- nomeCliente.ordinaProdotto(nomeProdotto);
+- nomeProdotto.assegnaCliente(nomeCliente);
 
-## 📜 Licenza
+Output:
 
-Questo progetto è distribuito sotto la licenza **MIT**. Sentiti libero di modificarlo e migliorarlo!
+- Il prodotto "nomeProdotto" è stato ordinato!
+- l cliente "nomeCliente" ha ordinato il prodotto "nomeProdotto" con id "IDProdotto", pagerà con il metodo di pagamento "metodoDiPagamento".
 
-## 💡 Contributi
+**Aggiunta nuovo prodotto ad uno dei processi di produzione:**
 
-I contributi sono **benvenuti**! Se hai suggerimenti o vuoi aggiungere nuove funzionalità, apri una **pull request**. 🚀
+Input:
 
----
+- nomeProcessoProduzione.aggiungiProdotto(nomeProdotto);
+
+Output:
+
+- l prodotto "nomeProdotto" con id "idProdotto" è stato aggiunto al processo di produzione "nomeProcessoProduzione".
 
 ✉️ **Contatti**: Se hai domande, apri un'**issue** su GitHub!
